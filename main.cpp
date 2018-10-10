@@ -82,7 +82,7 @@ int main()
 			int numberA, numberB;
 			cout << "Numero A: ";
 			cin >> numberA;
-			cout << "Numero A: ";
+			cout << "Numero B: ";
 			cin >> numberB;
 			Calculator<int> calculator;
 			cout << "Suma: " << calculator.Addtion(numberA, numberB) << endl;
@@ -97,7 +97,7 @@ int main()
 			double numberA, numberB;
 			cout << "Numero A: ";
 			cin >> numberA;
-			cout << "Numero A: ";
+			cout << "Numero B: ";
 			cin >> numberB;
 			Calculator<double> calculator;
 			cout << "Suma: " << calculator.Addtion(numberA, numberB) << endl;
