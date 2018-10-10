@@ -25,6 +25,7 @@ class Calculator
 		Type Multiplication(Type, Type);
 		Type Division(Type, Type);
 		Type AreaTriangle(Type,Type);
+		Type AreaRectangle(Type, Type);
 };
 
 template<class Type>
@@ -73,6 +74,11 @@ Type Calculator<Type>::AreaTriangle(Type base, Type height)
 	return (base*height)/2;
 }
 
+template <class Type>
+Type Calculator<Type>::AreaRectangle(Type base, Type height){
+	return base * height;
+}
+
 
 int main()
 {
@@ -99,6 +105,7 @@ int main()
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
 			cout<< "Potencia: "<<calculator.Pow(numberA, numberB)<<endl;
 			cout<< "Area de un triangulo:"<<calculator.AreaTriangle(numberA,numberB)<<endl;
+			cout<< "Area de un rectangulo:"<<calculator.AreaRectangle(numberA,numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 2)
@@ -114,7 +121,8 @@ int main()
 			cout << "Division: " << calculator.Division(numberA, numberB) << endl;
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
 			cout<< "Potencia: "<<calculator.Pow(numberA, numberB)<<endl;
-			cout<< "Área de un triangulo:"<<calculator.AreaTriangle(numberA,numberB)<<endl;
+			cout<< "Area de un triangulo:"<<calculator.AreaTriangle(numberA,numberB)<<endl;
+			cout<< "Area de un rectangulo:"<<calculator.AreaRectangle(numberA,numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 3)
