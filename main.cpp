@@ -10,6 +10,7 @@ Probrema: Desarrollo de un programa orientado a objetos que utilice plantillas p
 #include <stdlib.h>
 #include <iostream>
 #include <Windows.h>
+#include <math.h>
 using namespace std;
 
 template <class Type>
@@ -18,7 +19,7 @@ class Calculator
 	public:
 		Calculator();
 		~Calculator();
-		Type Pow(Type, int);
+		Type Pow(Type, Type);
 		Type Addtion(Type, Type);
 		Type Subtraction(Type, Type);
 		Type Multiplication(Type, Type);
@@ -60,14 +61,9 @@ Type Calculator<Type>::Division(Type valueA, Type valueB)
 }
 
 template <class Type> 
-Type Calculator<Type>::Pow(Type base, int pow)
+Type Calculator<Type>::Pow(Type base, Type power)
 {
-	Type result=1;
-	for(int i=0; i<pow; i++)
-	{
-		result*=base;
-	}
-	return result;
+	return pow(base, power);
 }
 
 int main()
@@ -108,7 +104,7 @@ int main()
 			cout << "Resta: " << calculator.Subtraction(numberA, numberB) << endl;
 			cout << "Division: " << calculator.Division(numberA, numberB) << endl;
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
-			cout<< "Potencia: "<<calculator.Pow(numberA, (int)numberB)<<endl;
+			cout<< "Potencia: "<<calculator.Pow(numberA, numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 3)
