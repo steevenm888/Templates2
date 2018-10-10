@@ -18,6 +18,7 @@ class Calculator
 	public:
 		Calculator();
 		~Calculator();
+		Type Pow(Type, int);
 		Type Addtion(Type, Type);
 		Type Subtraction(Type, Type);
 		Type Multiplication(Type, Type);
@@ -58,6 +59,17 @@ Type Calculator<Type>::Division(Type valueA, Type valueB)
 	return valueA / valueB;
 }
 
+template <class Type> 
+Type Calculator<Type>::Pow(Type base, int pow)
+{
+	Type result=1;
+	for(int i=0; i<pow; i++)
+	{
+		result*=base;
+	}
+	return result;
+}
+
 int main()
 {
 	system("color 0a");
@@ -81,20 +93,22 @@ int main()
 			cout << "Resta: " << calculator.Subtraction(numberA, numberB) << endl;
 			cout << "Division: " << calculator.Division(numberA, numberB) << endl;
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
+			cout<< "Potencia: "<<calculator.Pow(numberA, numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 2)
 		{
-			bool numberA, numberB;
+			double numberA, numberB;
 			cout << "Numero A: ";
 			cin >> numberA;
 			cout << "Numero A: ";
 			cin >> numberB;
-			Calculator<bool> calculator;
+			Calculator<double> calculator;
 			cout << "Suma: " << calculator.Addtion(numberA, numberB) << endl;
 			cout << "Resta: " << calculator.Subtraction(numberA, numberB) << endl;
 			cout << "Division: " << calculator.Division(numberA, numberB) << endl;
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
+			cout<< "Potencia: "<<calculator.Pow(numberA, (int)numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 3)
