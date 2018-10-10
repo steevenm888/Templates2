@@ -1,7 +1,7 @@
 /*
 Universidad de las Fuerzas Armadas ESPE
 Autor: Guillermo Casanova, Shakira Cofre, Esteban Molina
-Fecha de creaci�n: 09/10/2018			Fecha de �ltima modificaci�n: 09/10/2018
+Fecha de creacion: 09/10/2018			Fecha de utima modificacion: 09/10/2018
 Probrema: Desarrollo de un programa orientado a objetos que utilice plantillas para realizar operaciones matem�ticas b�sicas.
 */
 
