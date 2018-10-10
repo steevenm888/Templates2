@@ -5,7 +5,7 @@ Fecha de creaciï¿½n: 09/10/2018			Fecha de ï¿½ltima modificaciï¿½n: 09/10/2018
 Probrema: Desarrollo de un programa orientado a objetos que utilice plantillas para realizar operaciones matemï¿½ticas bï¿½sicas.
 */
 
-#include "pch.h"
+//#include "pch.h"
 #include <conio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -24,6 +24,7 @@ class Calculator
 		Type Subtraction(Type, Type);
 		Type Multiplication(Type, Type);
 		Type Division(Type, Type);
+		Type AreaTriangle(Type,Type);
 };
 
 template<class Type>
@@ -66,6 +67,13 @@ Type Calculator<Type>::Pow(Type base, Type power)
 	return pow(base, power);
 }
 
+template <class Type>
+Type Calculator<Type>::AreaTriangle(Type base, Type height)
+{
+	return (base*height)/2;
+}
+
+
 int main()
 {
 	system("color 0a");
@@ -90,6 +98,7 @@ int main()
 			cout << "Division: " << calculator.Division(numberA, numberB) << endl;
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
 			cout<< "Potencia: "<<calculator.Pow(numberA, numberB)<<endl;
+			cout<< "Area de un triangulo:"<<calculator.AreaTriangle(numberA,numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 2)
@@ -105,6 +114,7 @@ int main()
 			cout << "Division: " << calculator.Division(numberA, numberB) << endl;
 			cout << "Multiplicacion: " << calculator.Multiplication(numberA, numberB) << endl;
 			cout<< "Potencia: "<<calculator.Pow(numberA, numberB)<<endl;
+			cout<< "Área de un triangulo:"<<calculator.AreaTriangle(numberA,numberB)<<endl;
 			system("pause");
 		}
 		else if (selector == 3)
