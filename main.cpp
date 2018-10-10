@@ -1,8 +1,8 @@
 /*
 Universidad de las Fuerzas Armadas ESPE
 Autor: Guillermo Casanova, Shakira Cofre, Esteban Molina
-Fecha de creación: 09/10/2018			Fecha de última modificación: 09/10/2018
-Probrema: Desarrollo de un programa orientado a objetos que utilice plantillas para realizar operaciones matemáticas básicas.
+Fecha de creaciï¿½n: 09/10/2018			Fecha de ï¿½ltima modificaciï¿½n: 09/10/2018
+Probrema: Desarrollo de un programa orientado a objetos que utilice plantillas para realizar operaciones matemï¿½ticas bï¿½sicas.
 */
 
 #include "pch.h"
@@ -44,6 +44,18 @@ template <class Type>
 Type Calculator<Type>::Subtraction(Type valueA, Type valueB)
 {
 	return valueA - valueB;
+}
+
+template <class Type>
+Type Calculator<Type>::Multiplication(Type valueA, Type valueB)
+{
+	return valueA * valueB;
+}
+
+template <class Type>
+Type Calculator<Type>::Division(Type valueA, Type valueB)
+{
+	return valueA / valueB;
 }
 
 int main()
